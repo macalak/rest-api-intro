@@ -1,0 +1,88 @@
+# ===============================
+# .NET / C#
+# ===============================
+
+# Build results
+bin/
+obj/
+
+# Rider / ReSharper
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ===============================
+# .NET tooling
+# ===============================
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# dotnet watch
+.dotnet/
+
+# Coverage
+coverage/
+coverage.*.xml
+*.coverage
+*.coveragexml
+
+# ===============================
+# Logs & temp files
+# ===============================
+
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+*.old
+
+# ===============================
+# OS files
+# ===============================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ===============================
+# Environment / secrets
+# ===============================
+
+.env
+.env.*
+secrets.json
+appsettings.*.Development.json
+
+# ===============================
+# Test results
+# ===============================
+
+TestResults/
+``
