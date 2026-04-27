@@ -1,0 +1,96 @@
+{
+  "info": {
+    "_postman_id": "1d583a19-94d3-48a3-8086-a4740056fd64",
+    "name": "Parking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24736727"
+  },
+  "item": [
+    {
+      "name": "Access Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_secret",
+              "value": "<secret>",
+              "type": "text",
+              "uuid": "97bdfc4a-b9c6-4258-b23a-cbca1a1d1146"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text",
+              "uuid": "dd1b7b8e-253d-4ac2-8322-63d3f2d1f0f8"
+            },
+            {
+              "key": "client_id",
+              "value": "B2C_de_studentui",
+              "type": "text",
+              "uuid": "79feb50e-590b-4d2f-b35c-c777647fdf61"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://auth.preprod.parking.scheidt-bachmann.net/auth/realms/de_studentui/protocol/openid-connect/token",
+          "protocol": "https",
+          "host": [
+            "auth",
+            "preprod",
+            "parking",
+            "scheidt-bachmann",
+            "net"
+          ],
+          "path": [
+            "auth",
+            "realms",
+            "de_studentui",
+            "protocol",
+            "openid-connect",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Facilities",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Get Facility Counters",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pm.preprod.parking.scheidt-bachmann.net/capacity-manager/v2/de_studentui//occupancy/standardcounters/SB2186.7153.040239",
+          "protocol": "https",
+          "host": [
+            "pm",
+            "preprod",
+            "parking",
+            "scheidt-bachmann",
+            "net"
+          ],
+          "path": [
+            "capacity-manager",
+            "v2",
+            "de_studentui",
+            "",
+            "occupancy",
+            "standardcounters",
+            "SB2186.7153.040239"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
