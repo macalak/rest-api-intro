@@ -5,3 +5,6 @@
 * Tooling for C# development 
     * .NET SDK
     * IDE (e.g. Microsoft VS Code: https://code.visualstudio.com/ with C# Dev Kit extension )
+ 
+# API docs
+* https://documentation.prod.parking.scheidt-bachmann.net/docs/tutorial/authentication-guide#accessing-the-swagger-documentation
