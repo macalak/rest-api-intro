@@ -8,3 +8,4 @@
  
 # API docs
 * https://documentation.prod.parking.scheidt-bachmann.net/docs/tutorial/authentication-guide#accessing-the-swagger-documentation
+* Access token URL: https://auth.preprod.parking.scheidt-bachmann.net/auth/realms/de_studentui/protocol/openid-connect/token
