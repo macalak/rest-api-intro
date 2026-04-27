@@ -13,4 +13,4 @@
 * Facility counters: https://pm.preprod.parking.scheidt-bachmann.net/capacity-manager/v2/de_studentui//occupancy/standardcounters/:locationId
 
 # Postman collection
-* [Postman](./docs/Parking API.postman_collection.json)
+* [Postman](./docs/Parking%20API.postman_collection.json)
