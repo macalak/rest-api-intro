@@ -11,3 +11,6 @@
 * Access token URL: https://auth.preprod.parking.scheidt-bachmann.net/auth/realms/de_studentui/protocol/openid-connect/token
 * Get Facility: https://pm.preprod.parking.scheidt-bachmann.net/capacity-manager/v2/de_studentui/occupancy/facilities
 * Facility counters: https://pm.preprod.parking.scheidt-bachmann.net/capacity-manager/v2/de_studentui//occupancy/standardcounters/:locationId
+
+# Postman collection
+* [Postman](../docs/Parking API.postman_collection.json)
