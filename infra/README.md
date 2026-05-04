@@ -4,7 +4,7 @@
 * From this directory run `podman-compose up`  
 * Another option is to:
   * Install [Docker](https://docs.docker.com/desktop/setup/install/windows-install/) only
-  * Run Envou as: 
+  * Run Envoy as: 
 ```
 docker run --rm -it ^
   -p 9080:8080 ^
