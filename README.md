@@ -15,3 +15,14 @@
 
 # Postman collection
 * [Postman](./docs/Parking%20API.postman_collection.json)
+
+# Get JSON instead XML
+Format of returned data is controlled by HTTP (GET) Request Header: _Accept_
+* Use `Accept: aplication/json` to get data in JSON
+* Use `Accept: aplication/xml` to get data in XML
+
+Format of sent data is also contolled by HTTP (POST) Request Header: _Content-Type_
+* Use `Content-Type: aplication/json` if Request Body contains JSON
+* Use `Content-Type: aplication/xml` if Request Body contains  XML
+
+

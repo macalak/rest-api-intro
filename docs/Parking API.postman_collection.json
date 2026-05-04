@@ -59,6 +59,48 @@
     {
       "name": "Get Facilities",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJ1YkhqdDlHWFYwVnZGbEx2eXBzc1E2aHdWN2xHVDYwSThsWlJJdWZnMnlFIn0.eyJleHAiOjE3Nzc4OTQzODYsImlhdCI6MTc3Nzg5MjU4NiwianRpIjoidHJydGNjOmYyMDc1ZGJlLTkwYmMtOGVmMS1lNGMzLTUwYmVmZmZmMzE2NSIsImlzcyI6Imh0dHBzOi8vYXV0aC5wcmVwcm9kLnBhcmtpbmcuc2NoZWlkdC1iYWNobWFubi5uZXQvYXV0aC9yZWFsbXMvZGVfc3R1ZGVudHVpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImVjNjU0NTVmLWMwMjYtNGQ4My1hNWYwLTgwNzhlOWY5Y2M0NiIsInR5cCI6IkJlYXJlciIsImF6cCI6IkIyQ19kZV9zdHVkZW50dWkiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJkZWZhdWx0LXJvbGVzLWRlX3N0dWRlbnR1aSIsIkFQSSBVc2VyIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoiYWRkcmVzcyBlbWFpbCBwcm9maWxlIG9mZmxpbmVfYWNjZXNzIG1pY3JvcHJvZmlsZS1qd3QgcGhvbmUiLCJ1cG4iOiJzZXJ2aWNlLWFjY291bnQtYjJjX2RlX3N0dWRlbnR1aSIsImNsaWVudEhvc3QiOiIyMTMuODEuMTgyLjEzMCIsImFkZHJlc3MiOnt9LCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImdyb3VwcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtZGVfc3R1ZGVudHVpIiwiQVBJIFVzZXIiLCJ1bWFfYXV0aG9yaXphdGlvbiJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtYjJjX2RlX3N0dWRlbnR1aSIsImNsaWVudEFkZHJlc3MiOiIyMTMuODEuMTgyLjEzMCIsImNsaWVudF9pZCI6IkIyQ19kZV9zdHVkZW50dWkifQ.FT5IBkJKhdjRMgktyU8s1ct7ipUeptvcJ6r2UqH0lmQqq76NNp8afkHFtGFhT9td5nxTL97s6nL6AxeSS-ydoinAHnn18XDWQEyhCCu6GJqynrBmC3ALaDA6fSjGfafdbw-FyRpeZ_9w4i09-jgMrqHkCxqW9_AfOkZybp_VA91XwCpBoiN6I4oqFUlJ2oelTqFzsVFBCsdiEugjVAjglWAVwqTd-sDTuct2tAunBey3wUXx9dGnkYTZsnG2Jgwo7SJnrtrGnlWJEQpgCxjfsdMgTQViVIlnJgTyt1Q8Yb5xf1_JuXJxhbWTSDazvV_ySB17eWihEgKdeKu61um_NQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://pm.preprod.parking.scheidt-bachmann.net/capacity-manager/v2/de_studentui/occupancy/facilities",
+          "protocol": "https",
+          "host": [
+            "pm",
+            "preprod",
+            "parking",
+            "scheidt-bachmann",
+            "net"
+          ],
+          "path": [
+            "capacity-manager",
+            "v2",
+            "de_studentui",
+            "occupancy",
+            "facilities"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Facilities via Proxy",
+      "request": {
         "method": "GET",
         "header": []
       },
