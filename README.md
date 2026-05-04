@@ -5,6 +5,7 @@
 * Tooling for C# development 
     * .NET SDK
     * IDE (e.g. Microsoft VS Code: https://code.visualstudio.com/ with C# Dev Kit extension )
+* To run applications as containers, you need Podman: https://github.com/containers/podman-desktop/releases/download/v1.27.1/podman-desktop-1.27.1-setup.exe
  
 # API docs
 * https://documentation.prod.parking.scheidt-bachmann.net/docs/tutorial/authentication-guide#accessing-the-swagger-documentation

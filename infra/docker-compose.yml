@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  envoy:
+    image: envoyproxy/envoy:v1.38-latest
+    command: ["envoy", "-c", "/etc/envoy/envoy.yaml", "--log-level", "trace"]
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml
+    ports:
+      - "9080:8080"
