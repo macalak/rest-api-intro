@@ -16,6 +16,11 @@ upstream API request as an Authorization: Bearer … header.
 
 ```
 static_resources:
+  secrets:
+    - name: oauth-client-secret
+      generic_secret:
+        secret:
+          inline_string: "<put-secret-here>"
   listeners:
     - name: http_listener
       address:
@@ -38,8 +43,8 @@ static_resources:
                             prefix: "/"
                           route:
                             cluster: backend_api
+                            host_rewrite_literal: pm.preprod.parking.scheidt-bachmann.net
                 http_filters:
-                  # 🔐 OAuth2 token injection
                   - name: envoy.filters.http.credential_injector
                     typed_config:
                       "@type": type.googleapis.com/envoy.extensions.filters.http.credential_injector.v3.CredentialInjector
@@ -49,17 +54,19 @@ static_resources:
                         typed_config:
                           "@type": type.googleapis.com/envoy.extensions.http.injected_credentials.oauth2.v3.OAuth2
                           token_endpoint:
-                            uri: http://keycloak:8080/realms/demo/protocol/openid-connect/token
+                            uri: "https://auth.preprod.parking.scheidt-bachmann.net/auth/realms/de_studentui/protocol/openid-connect/token"
                             cluster: oauth_token
                             timeout: 3s
                           client_credentials:
-                            client_id:
-                              inline_string: envoy-bff
+                            client_id: "B2C_de_studentui"
                             client_secret:
-                              inline_string: envoy-bff-secret
-                          scopes:
-                            - api.read
-                  - name: envoy.filters.http.router
+                              name: oauth-client-secret
+                          # scopes:
+                          #  - api.read                          
+                  - name: envoy.filters.http.router               
+                    typed_config:
+                      "@type": type.googleapis.com/envoy.extensions.filters.http.router.v3.Router
+
 
   clusters:
     # Backend API
@@ -74,8 +81,17 @@ static_resources:
               - endpoint:
                   address:
                     socket_address:
-                      address: backend
-                      port_value: 8081
+                      address: pm.preprod.parking.scheidt-bachmann.net
+                      port_value: 443
+      transport_socket:
+        name: envoy.transport_sockets.tls
+        typed_config:
+          "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
+          sni: pm.preprod.parking.scheidt-bachmann.net
+          common_tls_context:
+            validation_context:
+              trust_chain_verification: ACCEPT_UNTRUSTED
+                      
 
     # OAuth2 token endpoint
     - name: oauth_token
@@ -89,8 +105,15 @@ static_resources:
               - endpoint:
                   address:
                     socket_address:
-                      address: keycloak
-                      port_value: 8080
+                      address: auth.preprod.parking.scheidt-bachmann.net
+                      port_value: 443
+      transport_socket:
+        name: envoy.transport_sockets.tls
+        typed_config:
+          "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
+          sni: auth.preprod.parking.scheidt-bachmann.net
+                      
+
 ```
 
 * Envoy fetches token using client credentials
