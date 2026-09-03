@@ -1,7 +1,7 @@
 # How to run Envoy proxy
 * Install [Podman](https://github.com/containers/podman-desktop/releases/download/v1.27.1/podman-desktop-1.27.1-setup.exe) 
 * Replace <put-secret-here> in _envoy.yaml_ with OAuth client secret
-* From this directory run `podman-compose up`  
+* From this directory run `podman compose up`  
 * Another option is to:
   * Install [Docker](https://docs.docker.com/desktop/setup/install/windows-install/) only
   * Run Envoy as: 
