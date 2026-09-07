@@ -50,3 +50,6 @@ sequenceDiagram
 * Create podman network: `podman network create my-api-net`
 * Run HTTP server: `MSYS_NO_PATHCONV=1 podman run -d --name my-php-server --network my-api-net -p 8000:8000 -v "$(pwd)":/usr/src/myapp -w /usr/src/myapp php:8.3-cli php -S 0.0.0.0:8000`
 * Run test: `MSYS_NO_PATHCONV=1 podman run --rm --network my-api-net -v "$(pwd)":/usr/src/myapp -w /usr/src/myapp php:8.3-cli php test.php`
+
+# How to execute Parking API with Access Token call
+* Run OAuthClientCredentialsClient: `MSYS_NO_PATHCONV=1 podman run --rm  -v "$(pwd)":/usr/src/myapp -w /usr/src/myapp php:8.3-cli sh -c "apt-get update && apt-get install -y unzip git && echo '{}' > composer.json && curl -k -sS --output composer.phar https://getcomposer.org/download/2.10.3/composer.phar | php && php composer.phar config disable-tls true && php composer.phar config secure-http false && php composer.phar require guzzlehttp/guzzle symfony/cache && php OAuthClientCredentialsClient.php"`
