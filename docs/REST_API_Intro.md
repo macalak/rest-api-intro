@@ -199,3 +199,38 @@ JSON response:
 ```
 
 ---
+
+## 3 Backend & Frontend
+
+The Frontend acts as an API consumer responsible for user interaction and presentation logic. It invokes API A exposed by the Backend using HTTP(S) requests and renders the received responses. The Backend acts as the system of record and business processing layer, implementing business rules, data management, security controls, and integrations with other services and systems. This separation of concerns allows the frontend and backend to evolve independently while communicating through a well-defined **API contract** (Open API specification - Swagger).
+
+![BF](/docs/frontend-backend.png)
+
+### Frontend (API consumer)
+The Frontend is responsible for presenting information to the user and enabling user interaction. It consumes the backend APIs over HTTP(S) and renders the returned data.
+
+**Responsibilities** 
+* Provide the user interface (Web UI, Mobile App, SPA).
+* Collect user input and validate it on the client side.
+* Invoke backend APIs using HTTP(S).
+* Display data and business outcomes returned by the backend.
+* Manage UI state, navigation, localization, and accessibility.
+* Handle authentication tokens and user sessions.
+* Present error messages and feedback to users.
+
+### Backend (API Provider)
+
+The Backend exposes API (e.g Parking System API) and is responsible for implementing business capabilities and managing data. It provides a stable contract that can be consumed by one or more frontend applications.
+
+**Responsibilities**
+
+* Expose APIs over HTTP(S).
+* Execute business logic and workflows.
+* Enforce authentication and authorization.
+* Validate incoming requests.
+* Manage persistence and data access.
+* Integrate with external systems and services.
+* Generate audit logs and business events.
+* Ensure security, reliability, and scalability.
+
+
